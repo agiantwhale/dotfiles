@@ -33,20 +33,6 @@ let mapleader = ','
 
 let g:tex_conceal = ''
 
-function! EnsureDirExists (dir)
-  if !isdirectory(a:dir)
-    call mkdir(a:dir, "p")
-  endif
-endfunction
-
-call EnsureDirExists($HOME . '/.vimbak')
-call EnsureDirExists($HOME . '/.vimswap')
-call EnsureDirExists($HOME . '/.vimundo')
-
-set backupdir=~/.vimbak
-set directory=~/.vimswap
-set undodir=~/vimundo
-set undofile
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed
 else
