@@ -1,4 +1,3 @@
-set guifont=Inconsolata:h14
 set nocompatible
 set nowrap
 set number
@@ -33,10 +32,15 @@ let mapleader = ','
 
 let g:tex_conceal = ''
 
+set backupdir=/tmp
+set directory=/tmp
+
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed
+  set guifont=Inconsolata:h12
 else
   set clipboard=unnamedplus
+  set guifont=Inconsolata\ 12
 endif
 
 autocmd Filetype tex setlocal cc=80
