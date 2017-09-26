@@ -37,10 +37,10 @@ set directory=/tmp
 
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed
-  set guifont=Iosevka\ Term:h12
+  set guifont=Iosevka\ Term:h14
 else
   set clipboard=unnamedplus
-  set guifont=Inconsolata\ 12
+  set guifont=Inconsolata\ 14
 endif
 
 autocmd Filetype tex setlocal cc=80
