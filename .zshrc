@@ -87,3 +87,14 @@ source $ZSH/oh-my-zsh.sh
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+alias AWS_START="aws ec2 start-instances --instance-ids i-0f96cc848d8a5fcf4"
+alias AWS_STOP="aws ec2 stop-instances --instance-ids i-0f96cc848d8a5fcf4"
+alias AWS_STATUS="aws ec2 describe-instances --instance-ids i-0f96cc848d8a5fcf4"
+alias AWS_CONNECT="ssh -L 16006:localhost:6006 ubuntu@'$(aws ec2 describe-instances --instance-ids i-0f96cc848d8a5fcf4 --query 'Reservations[].Instances[].PublicDnsName' --output text)'"
