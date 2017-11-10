@@ -47,6 +47,7 @@ endif
 autocmd Filetype tex setlocal cc=80
 autocmd Filetype tex setlocal textwidth=80
 autocmd Filetype tex setlocal tabstop=4
+autocmd Filetype tex setlocal shiftwidth=4
 autocmd Filetype tex setlocal expandtab
 
 if filereadable(expand("~/.vimrc_background"))
