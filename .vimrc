@@ -41,7 +41,7 @@ if system('uname -s') == "Darwin\n"
   let g:vimtex_view_method = 'skim'
 else
   set clipboard=unnamedplus
-  set guifont=Inconsolata\ 14
+  set guifont=Iosevka\ Term\ 12
 endif
 
 autocmd Filetype tex setlocal cc=80
