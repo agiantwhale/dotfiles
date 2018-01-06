@@ -16,6 +16,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'Yggdroot/indentLine'
 Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
+Plugin 'vim-scripts/cool.vim'
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()            " required
@@ -41,7 +42,7 @@ if system('uname -s') == "Darwin\n"
   let g:vimtex_view_method = 'skim'
 else
   set clipboard=unnamedplus
-  set guifont=Iosevka\ Term\ 12
+  set guifont=Inconsolata\ 12
 endif
 
 autocmd Filetype tex setlocal cc=80

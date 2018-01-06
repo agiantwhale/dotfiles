@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/anaconda3/bin:/usr/local/opt/python/libexec/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/anaconda3/bin:/usr/local/opt/python/libexec/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -94,7 +94,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
-alias AWS_START="aws ec2 start-instances --instance-ids i-0f96cc848d8a5fcf4"
-alias AWS_STOP="aws ec2 stop-instances --instance-ids i-0f96cc848d8a5fcf4"
-alias AWS_STATUS="aws ec2 describe-instances --instance-ids i-0f96cc848d8a5fcf4"
-alias AWS_CONNECT="ssh -L16006:localhost:6006 ubuntu@$(aws ec2 describe-instances --instance-ids i-0f96cc848d8a5fcf4 --query 'Reservations[].Instances[].PublicDnsName' --output text)"
+export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=$HOME/.local/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$HOME/.local/include:$CPLUS_INCLUDE_PATH
