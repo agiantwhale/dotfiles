@@ -42,14 +42,24 @@ if system('uname -s') == "Darwin\n"
   let g:vimtex_view_method = 'skim'
 else
   set clipboard=unnamedplus
-  set guifont=Inconsolata\ 12
+  set guifont=Iosevka\ Term\ 12
 endif
 
-autocmd Filetype tex setlocal cc=80
+autocmd Filetype tex setlocal colorcolumn=80
 autocmd Filetype tex setlocal textwidth=80
+autocmd Filetype tex setlocal formatoptions=cqt
 autocmd Filetype tex setlocal tabstop=4
 autocmd Filetype tex setlocal shiftwidth=4
 autocmd Filetype tex setlocal expandtab
+autocmd Filetype tex setlocal smartindent
+
+autocmd Filetype text setlocal colorcolumn=80
+autocmd Filetype text setlocal textwidth=80
+autocmd Filetype text setlocal formatoptions=cqt
+autocmd Filetype text setlocal tabstop=4
+autocmd Filetype text setlocal shiftwidth=4
+autocmd Filetype text setlocal expandtab
+autocmd Filetype text setlocal smartindent
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
