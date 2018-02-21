@@ -36,15 +36,6 @@ let g:tex_conceal = ''
 set backupdir=/tmp
 set directory=/tmp
 
-if system('uname -s') == "Darwin\n"
-  set clipboard=unnamed
-  set guifont=Iosevka\ Term:h14
-  let g:vimtex_view_method = 'skim'
-else
-  set clipboard=unnamedplus
-  set guifont=Iosevka\ Term\ 12
-endif
-
 autocmd Filetype tex setlocal colorcolumn=80
 autocmd Filetype tex setlocal textwidth=80
 autocmd Filetype tex setlocal formatoptions=cqt
