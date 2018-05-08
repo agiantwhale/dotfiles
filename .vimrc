@@ -52,6 +52,8 @@ autocmd Filetype text setlocal shiftwidth=4
 autocmd Filetype text setlocal expandtab
 autocmd Filetype text setlocal smartindent
 
+set clipboard^=unnamed,unnamedplus
+
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
