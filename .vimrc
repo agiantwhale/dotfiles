@@ -16,7 +16,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'Yggdroot/indentLine'
 Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
-Plugin 'vim-scripts/cool.vim'
 Plugin 'chriskempson/base16-vim'
 
 call vundle#end()            " required
