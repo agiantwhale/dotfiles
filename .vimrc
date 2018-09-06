@@ -35,6 +35,7 @@ let g:tex_conceal = ''
 
 set backupdir=/tmp
 set directory=/tmp
+set guifont=Iosevka-Term:h12
 
 autocmd Filetype tex setlocal colorcolumn=80
 autocmd Filetype tex setlocal textwidth=80
