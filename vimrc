@@ -34,7 +34,24 @@ let g:tex_conceal = ''
 
 set backupdir=/tmp
 set directory=/tmp
-set guifont=Iosevka-Term:h12
+
+if has("gui_running")
+  " Gvim
+  if has("gui_gtk2") || has("gui_gtk3")
+    " Linux GUI
+    set guifont=Iosevka\ Term\ 12
+  elseif has("gui_win32")
+    " Win32/64 GVim
+    set guifont=Iosevka\ Term\ 12
+  elseif has("gui_macvim")
+    " MacVim
+    set guifont=Iosevka-Term:h12
+  else
+    echo "Unknown GUI system!!!!"
+  endif
+else
+  " Terminal vim
+endif
 
 autocmd Filetype tex setlocal colorcolumn=80
 autocmd Filetype tex setlocal textwidth=80
