@@ -16,7 +16,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'Yggdroot/indentLine'
 Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
-Plugin 'chriskempson/base16-vim'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -71,9 +71,7 @@ autocmd Filetype text setlocal smartindent
 
 set clipboard^=unnamed,unnamedplus
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+colorscheme gruvbox
+set termguicolors
 
 syntax on
