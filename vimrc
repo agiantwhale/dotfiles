@@ -53,6 +53,8 @@ else
   " Terminal vim
 endif
 
+let g:tex_flavor = 'latex'
+
 autocmd Filetype tex setlocal colorcolumn=80
 autocmd Filetype tex setlocal textwidth=80
 autocmd Filetype tex setlocal formatoptions=cqt
