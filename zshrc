@@ -6,4 +6,7 @@ plugins=(git vi-mode history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
-eval "$(rbenv init -)"
+
+if (( $+commands[rbenv] )); then
+  eval "$(rbenv init -)"
+fi
