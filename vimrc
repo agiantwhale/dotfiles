@@ -45,7 +45,8 @@ if has("gui_running")
     set guifont=Iosevka\ Term\ 12
   elseif has("gui_macvim")
     " MacVim
-    set guifont=Iosevka-Term:h12
+    set macligatures
+    set guifont=PragmataProLiga-Regular:h14
   else
     echo "Unknown GUI system!!!!"
   endif
