@@ -17,7 +17,7 @@ esac
 
 source $ZSH/oh-my-zsh.sh
 
-
 if (( $+commands[rbenv] )); then
   eval "$(rbenv init -)"
+  export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 fi
