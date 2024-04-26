@@ -21,3 +21,9 @@ if (( $+commands[rbenv] )); then
   eval "$(rbenv init -)"
   export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 fi
+
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
